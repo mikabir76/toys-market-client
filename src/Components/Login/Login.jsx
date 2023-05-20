@@ -4,7 +4,9 @@ import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { BiError } from "react-icons/bi";
 import Swal from 'sweetalert2'
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 const Login = () => {
+    dynamicTitle('Login - Tukutoys')
     const [error, setError] = useState('')
 
     const {signIn} = useContext(AuthContext)

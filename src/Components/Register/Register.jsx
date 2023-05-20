@@ -4,8 +4,9 @@ import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiError } from "react-icons/bi";
 import Swal from 'sweetalert2'
-
+import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 const Register = () => {
+    dynamicTitle('Register - Tukutoys')
     const [error, setError] = useState('')
     // const [success, setSuccess] = useState('')
     const {createUser, profileUpdate} = useContext(AuthContext);

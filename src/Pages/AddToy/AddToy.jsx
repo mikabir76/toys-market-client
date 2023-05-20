@@ -1,8 +1,8 @@
 import React from 'react';
-
+import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 
 const AddToy = () => {
-   
+   dynamicTitle('Add toy - Tukutoys')
     const handleAddToy = event =>{
         event.preventDefault()
         const form = event.target;
@@ -72,7 +72,7 @@ const AddToy = () => {
             <span className="label-text text-xl font-semibold">Ratting</span>
           </label>
           <select className='input input-bordered' name="ratting" id="ratting">
-            <option selected value="5">5 Star</option>
+            <option value="5">5 Star</option>
             <option value="4.5">4.5 Star</option>
             <option value="4">4 Star</option>
             <option value="3">3 Star</option>
