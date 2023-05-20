@@ -3,6 +3,10 @@ import cricket from '../../assets/cricket.jpg'
 import football from '../../assets/football.jpg'
 import basketball from '../../assets/basketball.jpg'
 import hocky from '../../assets/hocky.jpg'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 
 const BestToy = () => {
@@ -11,10 +15,10 @@ const BestToy = () => {
         <h1 className='text-4xl text-center font-bold'>Our Best Collection</h1>
          <div className=' grid grid-cols-1 md:grid-cols-2 items-center py-16'>
             <div className='grid grid-cols-2 w-[65%]  ml-40'>
-            <img className='w-48 h-36 mb-3 border-x-2 m-none' src={cricket} alt="" />
-            <img className='w-48 h-36 mb-3 border-x-2 m-none' src={football} alt="" />
-            <img className='w-48 h-36 mb-3 border-x-2 m-none' src={basketball} alt="" />
-            <img className='w-48 h-36 mb-3 border-x-2 m-none' src={hocky} alt="" />
+            <img data-aos="zoom-in" data-aos-duration="1000" className='w-48 h-36 mb-3 border-x-2 m-none' src={cricket} alt="" />
+            <img data-aos="zoom-in" data-aos-duration="1000" className='w-48 h-36 mb-3 border-x-2 m-none' src={football} alt="" />
+            <img data-aos="zoom-in" data-aos-duration="1000" className='w-48 h-36 mb-3 border-x-2 m-none' src={basketball} alt="" />
+            <img data-aos="zoom-in" data-aos-duration="1000" className='w-48 h-36 mb-3 border-x-2 m-none' src={hocky} alt="" />
             </div>
             <div className='pe-24'>
                 <h1 className='text-4xl font-bold mb-4'>Popular and Trending Selling Toys</h1>

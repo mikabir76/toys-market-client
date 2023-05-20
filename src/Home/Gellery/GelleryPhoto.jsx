@@ -13,7 +13,7 @@ const GelleryPhoto = ({ photo }) => {
             </figure>
             <div className="absolute hover:bg-gradient-to-r from-[#333333] to-[rgba(21, 21, 21, 0)] w-72 h-48 transform -translate-y-1/2 rounded-xl top-1/2 mt-1">
                     <div className='text-white flex mt-36 pl-5'>
-                        <h1 className=' text-2xl px-4 rounded-full shadow-2xl font-mono font-thin bg-blue-800'>{title}</h1>
+                        <h1 className=' text-2xl px-4 rounded-full uppercase shadow-2xl font-mono font-thin bg-blue-800'>{title}</h1>
                     </div>
                 </div>
         </div>
