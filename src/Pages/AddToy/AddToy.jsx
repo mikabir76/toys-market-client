@@ -50,7 +50,7 @@ const AddToy = () => {
           <label className="label">
             <span className="label-text text-xl font-semibold">Name</span>
           </label>
-          <input type="text" placeholder="Name" name='name' className="input input-bordered" />
+          <input type="text" placeholder="Name" name='name' className="input input-bordered" required />
         </div>
        <div className="form-control">
           <label className="label">
@@ -69,7 +69,7 @@ const AddToy = () => {
           <label className="label">
             <span className="label-text text-xl font-semibold">Seller Email</span>
           </label>
-          <input type="email" placeholder="Seller Email" name='email' className="input input-bordered" />
+          <input type="email" placeholder="Seller Email" name='email' required className="input input-bordered" />
         </div>
        <div className="form-control">
           <label className="label">
@@ -85,7 +85,7 @@ const AddToy = () => {
           <label className="label">
             <span className="label-text text-xl font-semibold">Price</span>
           </label>
-          <input type="text" placeholder='Price' name='price' className="input input-bordered" />
+          <input type="text" placeholder='Price' name='price' className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
