@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 
 const NavBar = () => {
-
+  const {user, logOut} = useContext(AuthContext);
+  console.log(user)
     const navItem = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link>Blog</Link></li>
     <li><Link to='/toys'>All Toy</Link></li>
+   {user && <>
     <li><Link to='/add'>Add Toys</Link></li>
+   
+    <li><Link to='/add'>My Toys</Link></li></>}
     </>
+
+    const handleLogOut = ()=>{
+      logOut()
+      .then(()=>{})
+      .catch(error =>{
+        console.log(error)
+      })
+
+    }
     return (
         <div className="navbar bg-[#E8F7FF] border-y-2 p-5 text-xl font-semibold">
   <div className="navbar-start">
@@ -31,7 +45,15 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <Link to='/login'><button className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Login</button></Link>
+  <div className="avatar">
+  <div className="w-16 me-5 tooltip tooltip-left hover:border-2 rounded-full" data-tip={user?.displayName}>
+    <img src={user?.photoURL} />
+  </div>
+  </div>
+    
+  {user?
+  <button onClick={handleLogOut} className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Log Out</button>:
+  <Link to='/login'><button className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Login</button></Link>}
    
   </div>
 </div>
