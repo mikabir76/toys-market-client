@@ -1,5 +1,6 @@
 import React from 'react';
 import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
+import Swal from 'sweetalert2';
 
 const AddToy = () => {
    dynamicTitle('Add toy - Tukutoys')
@@ -18,6 +19,25 @@ const AddToy = () => {
         // console.log(name, photo, seller, email, category, price, ratting, quantity, description)
         const toyInfo = {name, photo, seller, email, category, price, ratting, quantity, description}
         console.log(toyInfo)
+        fetch('http://localhost:5000/addToys',{
+          method: "POST", 
+          headers:{
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(toyInfo)
+        })
+        .then(res => res.json())
+        .then(data =>{
+          console.log(data)
+          if(data.insertedId){
+            Swal.fire({
+              title: 'success',
+              text: 'Add toy data added',
+              icon: 'success',
+              confirmButtonText: 'Confirm'
+            })
+          }
+        })
     }
     return (
         <div className='bg-[#E8F7FF] p-8'>
