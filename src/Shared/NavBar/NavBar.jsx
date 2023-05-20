@@ -6,7 +6,7 @@ const NavBar = () => {
     const navItem = <>
     <li><Link to='/'>Home</Link></li>
     <li><Link>Blog</Link></li>
-    <li><Link>All Toys</Link></li>
+    <li><Link to='/add'>Add Toys</Link></li>
     </>
     return (
         <div className="navbar bg-[#E8F7FF] border-y-2 p-5 text-xl font-semibold">
