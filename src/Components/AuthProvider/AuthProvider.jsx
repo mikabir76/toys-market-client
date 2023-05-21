@@ -9,26 +9,32 @@ const AuthProvider = ({children}) => {
     const googleProvider = new GoogleAuthProvider()
 
     const createUser = (email, password)=>{
+        loading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     };
     const signIn = (email, password)=>{
+        loading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const googleLogin = ()=>{
+        loading(true)
         return signInWithPopup(auth, googleProvider)
     };
     const profileUpdate = (user, name, photo)=>{
+        loading(true)
         return updateProfile(user, name, photo)
     };
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser =>{
             setUser(currentUser)
+            setLoading(false)
         });
         return ()=> unsubscribe()
     },[]);
 
     const logOut = ()=>{
+        loading(true)
         return signOut(auth)
     }
     const authInfo = {
