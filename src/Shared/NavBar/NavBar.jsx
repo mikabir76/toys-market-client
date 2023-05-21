@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 
 const NavBar = () => {
   const {user, logOut} = useContext(AuthContext);
   console.log(user)
     const navItem = <>
-    <li><Link to='/'>Home</Link></li>
+    <li><NavLink to='/' className={({isActive}) => isActive ? 'text-blue-400 ' : ""}>Home</NavLink></li>
     <li><Link>Blog</Link></li>
     <li><Link to='/toys'>All Toy</Link></li>
    {user && <>
@@ -45,11 +45,11 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="avatar">
-  <div className="w-16 me-5 tooltip tooltip-left hover:border-2 rounded-full" data-tip={user?.displayName}>
-    <img src={user?.photoURL} />
+ 
+  <div className="tooltip tooltip-left" data-tip={user?.displayName}>
+    <img className='rounded-full me-4 w-16 hover:border-4' src={user?.photoURL} />
   </div>
-  </div>
+  
     
   {user?
   <button onClick={handleLogOut} className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Log Out</button>:
