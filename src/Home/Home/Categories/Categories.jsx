@@ -4,18 +4,20 @@ import 'react-tabs/style/react-tabs.css';
 import Category from './Category';
 const Categories = () => {
     const [categories, setCategories] = useState([]);
-    const [activeTab, setActiveTab] = useState("cricket")
+    const [activeTab, setActiveTab] = useState("test")
     const handleTabClick = (tabName) =>{
         setActiveTab(tabName)
         console.log(tabName)
     }
     useEffect(()=>{
-        fetch('http://localhost:5000/alltoy')
+        fetch(`http://localhost:5000/alltoy/${activeTab}`)
         .then(res => res.json())
         .then(data =>{
             setCategories(data)
         })
-    },[])
+    },[activeTab])
+    // const result = categories?.filter(category => category.category === activeTab);
+    // console.log(result)
     return (
         <div className='bg-[#E8F7FF] '>
             <h1 className='text-4xl font-bold text-center py-8'>Sub Categories</h1>
@@ -36,7 +38,7 @@ const Categories = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 px-8'>
                 {
                     categories.map(category => <Category
                     key={category._id}

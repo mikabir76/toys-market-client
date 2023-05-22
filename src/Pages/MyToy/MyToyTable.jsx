@@ -31,7 +31,7 @@ const MyToyTable = ({toy, handleDelete}) => {
             <Modal onClose={handleOnClose} visible={showModal}></Modal>
         </td>
         <td className=''>
-        <button toy={toy} className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>View Details</button>
+        <button toy={toy} className='btn-style'>View Details</button>
 
         </td>
     </tr>

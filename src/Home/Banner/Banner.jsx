@@ -6,8 +6,8 @@ const Banner = () => {
             <div className='space-y-7'>
                 <h1 className='text-5xl font-bold'>Better Kids, <br />Better World</h1>
                 <h3 className='text-gray-400'>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Alias mollitia sunt est maiores <br /> perspiciatis libero nostrum eaque ab necessitatibus harum?</h3>
-                <button className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white' data-aos="zoom-in"
-                data-aos-duration="3000">Shop Now</button>
+                <button className='btn-style'
+                >Shop Now</button>
                 <div>
                     <h1 className='text-4xl font-bold mb-4'>Shop by Age</h1>
                     <div className='flex justify-evenly me-24'>

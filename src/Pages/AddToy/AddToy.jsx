@@ -111,7 +111,7 @@ const AddToy = () => {
         <textarea name="description" placeholder='Description' id="" className='w-full mt-2 h-24 input-bordered input'></textarea>
        </div>
         <div className="form-control mt-6">
-          <button className="bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white">Submit</button>
+          <button className="btn-style">Submit</button>
         </div>
      
         </div>

@@ -11,7 +11,7 @@ function App() {
             <div className='space-y-7'>
                 <h1 className='text-5xl font-bold'>Better Kids, <br />Better World</h1>
                 <h3 className='text-gray-400'>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Alias mollitia sunt est maiores <br /> perspiciatis libero nostrum eaque ab necessitatibus harum?</h3>
-                <button className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Shop Now</button>
+                <button className='btn-style'>Shop Now</button>
             </div>
             <div>
                 <img className='w-3/4' src="https://img.freepik.com/free-vector/happy-young-boy-student-character_1308-27687.jpg?size=626&ext=jpg&ga=GA1.1.1654759242.1680368383&semt=ais" alt="" />

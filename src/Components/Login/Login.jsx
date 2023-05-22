@@ -63,7 +63,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6 ">
-                        <button className="bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white w-full">Login</button>
+                        <button className="btn-style w-full">Login</button>
                     </div>
                     <div>
                         <h1 className='text-center my-4'

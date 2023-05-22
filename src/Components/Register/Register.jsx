@@ -104,7 +104,7 @@ const Register = () => {
                     </label>
                 </div>
                 <div className="form-control mt-6 ">
-                    <button className="bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white w-full" required>Register</button>
+                    <button className="btn-style w-full" required>Register</button>
                 </div>
                 <div>
                     <h1 className='text-center my-4'>All Ready Have an Account? <Link to='/login'>Login</Link></h1>

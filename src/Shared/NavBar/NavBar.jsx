@@ -6,12 +6,12 @@ const NavBar = () => {
   const {user, logOut} = useContext(AuthContext);
   // console.log(user)
     const navItem = <>
-    <li><NavLink to='/' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>Home</NavLink></li>
-    <li><NavLink to='/blog' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>Blog</NavLink></li>
-    <li><NavLink to='/toys' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>All Toy</NavLink></li>
+    <li><NavLink to='/' className={({isActive}) => isActive ? 'btn-style ' : ""}>Home</NavLink></li>
+    <li><NavLink to='/blog' className={({isActive}) => isActive ? 'btn-style ' : ""}>Blog</NavLink></li>
+    <li><NavLink to='/toys' className={({isActive}) => isActive ? 'btn-style ' : ""}>All Toy</NavLink></li>
    {user && <>
-    <li><NavLink to='/add' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>Add Toys</NavLink></li>
-    <li><NavLink to='/mytoy' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>My Toys</NavLink></li>
+    <li><NavLink to='/add' className={({isActive}) => isActive ? 'btn-style ' : ""}>Add Toys</NavLink></li>
+    <li><NavLink to='/mytoy' className={({isActive}) => isActive ? 'btn-style ' : ""}>My Toys</NavLink></li>
     </>}
     </>
 
@@ -52,8 +52,8 @@ const NavBar = () => {
   
     
   {user?
-  <button onClick={handleLogOut} className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Log Out</button>:
-  <Link to='/login'><button className='bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white'>Login</button></Link>}
+  <button onClick={handleLogOut} className='btn-style'>Log Out</button>:
+  <Link to='/login'><button className='btn-style'>Login</button></Link>}
    
   </div>
 </div>
