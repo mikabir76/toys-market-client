@@ -15,7 +15,7 @@ const Banner = () => {
                         <p className='bg-gray-200 rounded-lg px-2 text-gray-700'>1-5 Years</p>
                         <p className='bg-gray-200 rounded-lg px-2 text-gray-700'>6-10 Years</p>
                         <p className='bg-gray-200 rounded-lg px-2 text-gray-700'>Older Kids</p>
-                        <span className='bg-[#6D74E4] flex items-center rounded-lg me-16'><BiSearch className='text-xl text-white'></BiSearch></span>
+                        <span className='bg-[#6D74E4] flex items-center rounded-lg me-16 shadow-inner'><BiSearch className='text-xl text-white'></BiSearch></span>
                         
                     </div>
                 </div>

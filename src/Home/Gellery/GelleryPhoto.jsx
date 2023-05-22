@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 const GelleryPhoto = ({ photo }) => {
     const {img, title} = photo
-    console.log(photo)
+    // console.log(photo)
     return (
         <div className=" w-80 relative my-0 cursor-pointer" data-aos="flip-left" data-aos-duration="2000">
             <figure className="pt-2">

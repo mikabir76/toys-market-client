@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 
 const AddToy = () => {
-   dynamicTitle('Add toy - Tukutoys')
+  dynamicTitle('Add toy - Tukutoys')
+  const {user} = useContext(AuthContext)
     const handleAddToy = event =>{
         event.preventDefault()
         const form = event.target;
@@ -63,13 +65,13 @@ const AddToy = () => {
           <label className="label">
             <span className="label-text text-xl font-semibold">Seller Name</span>
           </label>
-          <input type="text" placeholder="Seller Name" name='seller' className="input input-bordered" />
+          <input type="text" placeholder="Seller Name" defaultValue={user?.displayName} readOnly name='seller' className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text text-xl font-semibold">Seller Email</span>
           </label>
-          <input type="email" placeholder="Seller Email" name='email' required className="input input-bordered" />
+          <input type="email" placeholder="Seller Email" defaultValue={user?.email} readOnly name='email' required className="input input-bordered" />
         </div>
        <div className="form-control">
           <label className="label">

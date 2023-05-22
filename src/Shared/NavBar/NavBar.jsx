@@ -4,7 +4,7 @@ import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 
 const NavBar = () => {
   const {user, logOut} = useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
     const navItem = <>
     <li><NavLink to='/' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>Home</NavLink></li>
     <li><NavLink to='/blog' className={({isActive}) => isActive ? 'bg-gradient-to-r from-[#6D74E4] to-[#848FFF] py-2 px-4 rounded-md text-xl text-white ' : ""}>Blog</NavLink></li>
