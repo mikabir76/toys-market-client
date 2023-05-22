@@ -1,5 +1,7 @@
 import React from 'react';
-import Rating from 'react-rating';
+import { Rating } from '@smastrom/react-rating'
+
+import '@smastrom/react-rating/style.css'
 // import { BiStar} from "react-icons/bi";
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
 const Category = ({category}) => {
@@ -14,14 +16,7 @@ const Category = ({category}) => {
     <h2 className="card-title">{name}</h2>
     <p className='text-xl font-semibold'>${price}</p>
     <div className='flex items-center text-xl'>
-    <Rating 
-    className='text-yellow-400'
-    readonly
-    placeholderRating={ratting}
-    emptySymbol={<BsStarHalf></BsStarHalf>}
-    placeholderSymbol={<BsStarFill></BsStarFill>}
-    fullSymbol={<BsStarFill></BsStarFill>}
-    ></Rating>{ratting}
+    <Rating style={{ maxWidth: 100 }} readOnly value={ratting} />{ratting}
     </div>
     <div className="card-actions">
       <button className="btn-style">View Details</button>
