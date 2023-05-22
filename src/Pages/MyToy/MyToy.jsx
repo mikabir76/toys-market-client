@@ -2,8 +2,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 import MyToyTable from './MyToyTable';
 import Swal from 'sweetalert2';
+import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 
 const MyToy = () => {
+    dynamicTitle('My Toys - Tukutoys')
     const {user} = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
 
@@ -19,7 +21,7 @@ const MyToy = () => {
     const handleDelete = id=>{
         Swal.fire({
             title: 'Are you sure?',
-            text: "You want to delete your data",
+            text: "You want to delete your product",
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
