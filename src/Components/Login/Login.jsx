@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { BiError } from "react-icons/bi";
 import Swal from 'sweetalert2'
@@ -8,7 +8,7 @@ import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 const Login = () => {
     dynamicTitle('Login - Tukutoys')
     const [error, setError] = useState('')
-
+    const navigate = useNavigate()
     const {signIn} = useContext(AuthContext)
     const handleLogin = event =>{
         event.preventDefault();
@@ -31,6 +31,7 @@ const Login = () => {
                   })
             }
             form.reset()
+            navigate('/')
         })
         .catch(error =>{
             setError(error.message)   

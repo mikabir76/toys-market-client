@@ -13,11 +13,11 @@ const AuthProvider = ({children}) => {
         return createUserWithEmailAndPassword(auth, email, password)
     };
     const signIn = (email, password)=>{
-        loading(true)
+        // loading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const googleLogin = ()=>{
-        loading(true)
+        // loading(true)
         return signInWithPopup(auth, googleProvider)
     };
     const profileUpdate = (user, name, photo)=>{
@@ -34,7 +34,7 @@ const AuthProvider = ({children}) => {
     },[]);
 
     const logOut = ()=>{
-        loading(true)
+        // loading(true)
         return signOut(auth)
     }
     const authInfo = {

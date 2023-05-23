@@ -2,8 +2,10 @@ import React, { useContext } from 'react';
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../Components/AuthProvider/AuthProvider';
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 const SocialLogin = () => {
   const {googleLogin} = useContext(AuthContext)
+  const navigate = useNavigate()
 
   const handleGoogleLogin = ()=>{
     googleLogin()
@@ -18,7 +20,9 @@ const SocialLogin = () => {
             confirmButtonText: 'Confirm'
           })
     }
-    })
+    navigate('/')
+  })
+
     .catch(error =>{
       console.log(error)
     })

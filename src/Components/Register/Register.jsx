@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import { BiError } from "react-icons/bi";
@@ -8,6 +8,7 @@ import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 const Register = () => {
     dynamicTitle('Register - Tukutoys')
     const [error, setError] = useState('')
+    const navigate = useNavigate()
     // const [success, setSuccess] = useState('')
     const {createUser, profileUpdate} = useContext(AuthContext);
     console.log(createUser)
@@ -47,6 +48,7 @@ const Register = () => {
                     icon: 'success',
                     confirmButtonText: 'Ok'
                   })
+                  navigate('/')
             }
             userUpdate(loggedUser, name, photo)
             form.reset()

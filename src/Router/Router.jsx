@@ -10,6 +10,7 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import MyToy from "../Pages/MyToy/MyToy";
 import Blog from "../Components/Blog/Blog";
 import MyToyTable from "../Pages/MyToy/MyToyTable";
+import Details from "../Shared/ViewDetails/Details";
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
                 path: 'mytoy',
                 element: <PrivateRoute><MyToy></MyToy></PrivateRoute>
             },
+            {
+                path: 'details/:id',
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader : ({params}) => fetch(`http://localhost:5000/addToys/${params.id}`)
+            }
             // {
             //     path: ':id',
             //     element: <MyToyTable></MyToyTable>,

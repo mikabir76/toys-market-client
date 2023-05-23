@@ -7,7 +7,7 @@ const Categories = () => {
     const [activeTab, setActiveTab] = useState("test")
     const handleTabClick = (tabName) =>{
         setActiveTab(tabName)
-        console.log(tabName)
+        // console.log(tabName)
     }
     useEffect(()=>{
         fetch(`http://localhost:5000/alltoy/${activeTab}`)

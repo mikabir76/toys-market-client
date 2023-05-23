@@ -34,7 +34,7 @@ const MyToyTable = ({toy, handleDelete}) => {
             <Modal toy={toy} onClose={()=> setShowModal(false)} open={showModal}></Modal>
         </td>
         <td className=''>
-        <button toy={toy} className='btn-style'>View Details</button>
+        <Link to={`/details/${_id}`}><button className='btn-style'>View Details</button></Link>
 
         </td>
     </tr>

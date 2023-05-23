@@ -4,9 +4,10 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 // import { BiStar} from "react-icons/bi";
 import { BsStarHalf, BsStarFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 const Category = ({category}) => {
     // console.log(category)
-    const {photo, name, price, ratting} = category || {};
+    const {_id,photo, name, price, ratting} = category || {};
     return (
         <div className=" w-96 bg-base-100 rounded-2xl border-2 border-y-[#6D74E4]">
   <figure className="px-10 pt-10">
@@ -19,7 +20,7 @@ const Category = ({category}) => {
     <Rating style={{ maxWidth: 100 }} readOnly value={ratting} />{ratting}
     </div>
     <div className="card-actions">
-      <button className="btn-style">View Details</button>
+     <Link to={`/details/${_id}`}> <button className="btn-style">View Details</button></Link>
     </div>
   </div>
 </div>
