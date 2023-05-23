@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdDelete } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import Modal from './Modal';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const MyToyTable = ({toy, handleDelete}) => {
     const {_id, photo, name, price, quantity, category, seller} = toy;
    const [showModal, setShowModal] = useState(false)
    const handleOnClose = ()=> setShowModal(false)
 
- 
+//    useEffect(()=>{
+//     fetch('')
+//    },[])
     return (
         <tr className='hover:bg-[#daeef9] border-2'>
             <td>
@@ -27,8 +30,8 @@ const MyToyTable = ({toy, handleDelete}) => {
         <td className=''>{'$' + price}</td>
         <td className=''>{category}</td>
         <td>
-            <button onClick={()=> setShowModal(true)} className='p-4 border-2 bg-blue-100'><FaEdit className='text-2xl'></FaEdit></button>
-            <Modal onClose={handleOnClose} visible={showModal}></Modal>
+            <Link><button onClick={()=> setShowModal(true)} className='p-4 border-2 bg-blue-100'><FaEdit className='text-2xl'></FaEdit></button></Link>
+            <Modal toy={toy} onClose={()=> setShowModal(false)} open={showModal}></Modal>
         </td>
         <td className=''>
         <button toy={toy} className='btn-style'>View Details</button>

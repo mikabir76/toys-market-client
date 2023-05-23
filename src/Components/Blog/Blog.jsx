@@ -1,7 +1,9 @@
 import React from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { dynamicTitle } from '../../GenneralFunction/GenneralFunction';
 const Blog = () => {
+    dynamicTitle('Blog - Tukutoys')
     return (
         <div className='bg-[#E8F7FF]'>
             <div className='grid grid-cols-1 md:grid-cols-2 items-center p-12'>
