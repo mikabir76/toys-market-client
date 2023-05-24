@@ -21,7 +21,7 @@ const Banner = () => {
                 </div>
             </div>
             <div>
-                <img className='w-3/4' src="https://img.freepik.com/free-vector/illustration-sport-concept-isometric-graphic_1375-283.jpg?w=740&t=st=1684427449~exp=1684428049~hmac=8b1422bb4ec6c039ad61a27891bb8fd861bea804aed5c2db7c035a0ae528b493" alt="" />
+                <img className='w-3/4' src="https://img.freepik.com/free-vector/cardboard-box-full-sport-equipments-white_1308-39926.jpg?size=626&ext=jpg&ga=GA1.1.1654759242.1680368383&semt=ais" alt="" />
             </div>
         </div>
     );

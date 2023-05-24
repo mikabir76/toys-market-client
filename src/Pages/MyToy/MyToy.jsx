@@ -16,7 +16,7 @@ const MyToy = () => {
         .then(data =>{
             setMyToys(data)
         })
-    },[])
+    },[myToys])
 
     const handleDelete = id=>{
         Swal.fire({

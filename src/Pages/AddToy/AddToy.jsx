@@ -18,6 +18,7 @@ const AddToy = () => {
         const ratting = form.ratting.value;
         const quantity = form.quantity.value;
         const description = form.description.value;
+        
         // console.log(name, photo, seller, email, category, price, ratting, quantity, description)
         const toyInfo = {name, photo, seller, email, category, price, ratting, quantity, description}
         console.log(toyInfo)
